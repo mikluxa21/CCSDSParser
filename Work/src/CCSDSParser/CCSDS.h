@@ -85,4 +85,3 @@ private:
 	std::bitset<LEN_TIME_CCSDS_BIT> time;  //Ошибка в постановке задачи
 };
 
-

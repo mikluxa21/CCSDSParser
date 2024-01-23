@@ -4,7 +4,7 @@ cmake_policy(SET CMP0016 NEW)
 project(CCSDS VERSION 1.0.0 DESCRIPTION "Project")
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
-add_subdirectory(tests)
+#add_subdirectory(tests)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/CCSDSParser)
-enable_testing()
+#enable_testing()

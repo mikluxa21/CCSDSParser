@@ -1,4 +1,7 @@
 #include "CCSDSParser/CCSDS.h"
+
+
+template <class TypeCCSDS>
 CCSDS::CCSDS(TypeCCSDS& packageCCSDS, size_t packageLen, size_t packageChanged)
 {
 	if(packageLen < LEN_HEADER_CCSDS_BYTE)
@@ -64,3 +67,4 @@ CCSDS::CCSDS(TypeCCSDS& packageCCSDS, size_t packageLen, size_t packageChanged)
 	this->countUsedByte = size - packageChanged;
 	
 }
+
