@@ -54,7 +54,7 @@ class CCSDS: public ParentCCSDS
 {
 
 public:
-	CCSDS(TypeCCSDS& packageCCSDS, size_t packageLen, size_t packageChanged);
+	CCSDS(TypeCCSDS&, size_t, size_t);
 	
 public:
 	TypeCCSDS getPayload() override { return this->payload;}
