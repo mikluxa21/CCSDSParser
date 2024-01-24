@@ -1,8 +1,7 @@
 #include "CCSDSParser/CCSDS.h"
 
 
-template <class TypeCCSDS>
-CCSDS::CCSDS(TypeCCSDS& packageCCSDS, size_t packageLen, size_t packageChanged)
+template <class TypeCCSDS> CCSDS<TypeCCSDS>::CCSDS(TypeCCSDS& packageCCSDS, size_t packageLen, size_t packageChanged)
 {
 	if(packageLen < LEN_HEADER_CCSDS_BYTE)
 		throw std::invalid_argument("Len shorted len of headr");
