@@ -4,3 +4,5 @@ project(CCSDS VERSION 1.0.0 DESCRIPTION "add executable main")
 
 set(SOURCE_FILES main.cpp)
 add_executable(main ${SOURCE_FILES})
+
+target_link_libraries(main PRIVATE libInterface)

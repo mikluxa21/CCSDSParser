@@ -1,4 +1,4 @@
-#include "CCSDSParser/CCSDS.h"
+#include "CCSDS.h"
 
 
 template <class TypeCCSDS> CCSDS<TypeCCSDS>::CCSDS(TypeCCSDS& packageCCSDS, size_t packageLen, size_t packageChanged)
