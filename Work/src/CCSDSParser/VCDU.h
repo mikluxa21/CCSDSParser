@@ -1,5 +1,6 @@
 #ifndef VCDU_H
 #define VCDU_H
+
 #include <CCSDS.h>
 
 #include <bitset>
@@ -64,4 +65,5 @@ private:
 
 
 template class VCDU<std::vector<uint8_t>>;
+
 #endif

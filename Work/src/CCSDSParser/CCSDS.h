@@ -1,5 +1,6 @@
 #ifndef CCSDS_H
 #define CCSDS_H
+
 #include <bitset>
 #include <string>
 #include <vector>
@@ -89,5 +90,6 @@ private:
 };
 
 template class CCSDS<std::vector<uint8_t>>;
+
 #endif
 

@@ -1,5 +1,6 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
+
 #include <VCDU.h>
 
 
@@ -18,4 +19,5 @@ private:
 	std::vector<std::vector<uint8_t>> vecResult;	
 };
 template class Interface<std::vector<uint8_t>>;
+
 #endif
