@@ -4,10 +4,10 @@
 
 int main()
 {
-	Interface<std::vector<unsigned char>> interface;
-	std::vector<unsigned char> vecInput;
+	Interface<std::vector<uint8_t>> interface;
+	std::vector<uint8_t> vecInput;
 	size_t lenVecInput = 0;
-	std::vector<unsigned char> result;
+	std::vector<uint8_t> result;
 	while(1)
 	{
 		std::cout << "For add CCSDS package, write '1'" << std::endl << "For add stop, write '2'" << std::endl << "For get result, write '3'" << std::endl;
@@ -21,7 +21,7 @@ int main()
 				std::cout << "Write package: ";
 				for(size_t i = 0; i < lenVecInput; i++)
 					{
-						unsigned char c;
+						uint8_t c;
 						std::cin >> c;
 						vecInput.push_back(c);
 					}

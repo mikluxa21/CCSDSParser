@@ -5,7 +5,7 @@ Interface<TypeInterface>::Interface()
 {
 	for(size_t i = 0; i <=31; i++)
 		{
-			std::vector<unsigned char> vec;
+			std::vector<uint8_t> vec;
 			vecResult.push_back(vec);
 		}
 }
@@ -23,7 +23,7 @@ void Interface<TypeInterface>::addVCDU(TypeInterface& networkPackage, size_t pac
 		this->prevFrameCounter = parentVCDU->getToUlongFrameCounter();
 	}
 	
-	std::vector<unsigned char> lastCCSDSPackage = parentVCDU->getLastCCSDSPacksge();
+	std::vector<uint8_t> lastCCSDSPackage = parentVCDU->getLastCCSDSPacksge();
 	if(lastCCSDSPackage.size() != 0)
 		{
 			if(this->lastAPID == -1)
@@ -42,7 +42,7 @@ void Interface<TypeInterface>::addVCDU(TypeInterface& networkPackage, size_t pac
 					{
 						this->lastAPID = ccsds->getToUlongAPID();
 						auto resEndIter = this->vecResult[this->lastAPID].end();
-						std::vector<unsigned char> payloadVCDU = ccsds->getPayload();
+						std::vector<uint8_t> payloadVCDU = ccsds->getPayload();
 						auto ccsdsBeginIter = payloadVCDU.begin();
 						auto ccsdsEndIter = payloadVCDU.end();
 						this->vecResult[this->lastAPID].insert(resEndIter, ccsdsBeginIter, ccsdsEndIter);
@@ -53,7 +53,7 @@ void Interface<TypeInterface>::addVCDU(TypeInterface& networkPackage, size_t pac
 }
 
 template <class TypeInterface>
-std::vector<std::vector<unsigned char>> Interface<TypeInterface>::getCCSDSPackages() 
+std::vector<std::vector<uint8_t>> Interface<TypeInterface>::getCCSDSPackages() 
 {
 	if(this->prevFrameCounter == -1)
 		throw std::runtime_error("Empty vecResilt");

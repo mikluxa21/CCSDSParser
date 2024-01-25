@@ -11,11 +11,11 @@ public:
 	
 	void addVCDU(TypeInterface& , size_t );
 public:
-	std::vector<std::vector<unsigned char>> getCCSDSPackages();
+	std::vector<std::vector<uint8_t>> getCCSDSPackages();
 private:
 	size_t prevFrameCounter = -1;
 	size_t lastAPID = -1;
-	std::vector<std::vector<unsigned char>> vecResult;	
+	std::vector<std::vector<uint8_t>> vecResult;	
 };
-template class Interface<std::vector<unsigned char>>;
+template class Interface<std::vector<uint8_t>>;
 #endif

@@ -39,15 +39,15 @@
 class ParentCCSDS
 {
 public:	
-	virtual std::vector<unsigned char> getPayload() {return std::vector<unsigned char>();}
+	virtual std::vector<uint8_t> getPayload() {return std::vector<uint8_t>();}
 	virtual size_t getCountUsedByte() { return 0;}
-	virtual unsigned int getToUlongVersion() { return 0;}
-	virtual unsigned int getToUlongType() { return 0;}
-	virtual unsigned int getToUlongHelpersHeaderFlag() { return 0;}
-	virtual unsigned int getToUlongAPID() { return 0;}
-	virtual unsigned int getToUlongFragmentationFlag() { return 0;}
-	virtual unsigned int getToUlongFrameCounter() { return 0;}
-	virtual unsigned int getToUlongSize() { return 0;}
+	virtual uint32_t getToUlongVersion() { return 0;}
+	virtual uint32_t getToUlongType() { return 0;}
+	virtual uint32_t getToUlongHelpersHeaderFlag() { return 0;}
+	virtual uint32_t getToUlongAPID() { return 0;}
+	virtual uint32_t getToUlongFragmentationFlag() { return 0;}
+	virtual uint32_t getToUlongFrameCounter() { return 0;}
+	virtual uint32_t getToUlongSize() { return 0;}
 	virtual std::bitset<64> getToBitsetTime() { return std::bitset<64>(0);}
 };
 
@@ -63,13 +63,13 @@ public:
 	TypeCCSDS getPayload() override;
 	size_t getCountUsedByte() override;
 	
-	unsigned int getToUlongVersion() override;
-	unsigned int getToUlongType() override;
-	unsigned int getToUlongHelpersHeaderFlag() override;
-	unsigned int getToUlongAPID() override;
-	unsigned int getToUlongFragmentationFlag() override;
-	unsigned int getToUlongFrameCounter() override;
-	unsigned int getToUlongSize() override;
+	uint32_t getToUlongVersion() override;
+	uint32_t getToUlongType() override;
+	uint32_t getToUlongHelpersHeaderFlag() override;
+	uint32_t getToUlongAPID() override;
+	uint32_t getToUlongFragmentationFlag() override;
+	uint32_t getToUlongFrameCounter() override;
+	uint32_t getToUlongSize() override;
 	std::bitset<64> getToBitsetTime();
 	
 	
@@ -88,7 +88,6 @@ private:
 	std::bitset<LEN_TIME_CCSDS_BIT> time;  //Ошибка в постановке задачи
 };
 
-template class CCSDS<std::vector<unsigned char>>;
-
+template class CCSDS<std::vector<uint8_t>>;
 #endif
 

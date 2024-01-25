@@ -10,18 +10,18 @@
 class ParentVCDU
 {
 public:
-	virtual std::vector<unsigned char> getLastCCSDSPacksge() {return std::vector<unsigned char>();};
+	virtual std::vector<uint8_t> getLastCCSDSPacksge() {return std::vector<uint8_t>();};
 	virtual std::vector<ParentCCSDS*> getCCSDSVector() {return std::vector<ParentCCSDS*>();}
 	
-	virtual unsigned int getToUlongVersion(){ return 0;}
-	virtual unsigned int getToUlongObjID(){ return 0;}
-	virtual unsigned int getToUlongVCID(){ return 0;}
-	virtual unsigned int getToUlongFrameCounter(){ return 0;}
-	virtual unsigned int getToUlongRepetitionFlag(){ return 0;}
-	virtual unsigned int getToUlongReserve(){ return 0;}
+	virtual uint32_t getToUlongVersion(){ return 0;}
+	virtual uint32_t getToUlongObjID(){ return 0;}
+	virtual uint32_t getToUlongVCID(){ return 0;}
+	virtual uint32_t getToUlongFrameCounter(){ return 0;}
+	virtual uint32_t getToUlongRepetitionFlag(){ return 0;}
+	virtual uint32_t getToUlongReserve(){ return 0;}
 	
-	virtual unsigned int getToUlongReservedBitMDPU(){ return 0;}
-	virtual unsigned int getToUlongOffsetBitMDPU(){return 0;} 
+	virtual uint32_t getToUlongReservedBitMDPU(){ return 0;}
+	virtual uint32_t getToUlongOffsetBitMDPU(){return 0;} 
 };
 
 
@@ -33,21 +33,21 @@ public:
 	~VCDU();
 	
 public:
-	std::vector<unsigned char> getLastCCSDSPacksge() override;
+	std::vector<uint8_t> getLastCCSDSPacksge() override;
 	std::vector<ParentCCSDS*> getCCSDSVector() override;
-	unsigned int getToUlongVersion() override;
-	unsigned int getToUlongObjID() override;
-	unsigned int getToUlongVCID() override;
-	unsigned int getToUlongFrameCounter() override;
-	unsigned int getToUlongRepetitionFlag() override;
-	unsigned int getToUlongReserve() override;
+	uint32_t getToUlongVersion() override;
+	uint32_t getToUlongObjID() override;
+	uint32_t getToUlongVCID() override;
+	uint32_t getToUlongFrameCounter() override;
+	uint32_t getToUlongRepetitionFlag() override;
+	uint32_t getToUlongReserve() override;
 	
-	unsigned int getToUlongReservedBitMDPU() override;
-	unsigned int getToUlongOffsetBitMDPU() override; 
+	uint32_t getToUlongReservedBitMDPU() override;
+	uint32_t getToUlongOffsetBitMDPU() override; 
 	
 private:
 
-	std::vector<unsigned char> lastCCSDSPackage;
+	std::vector<uint8_t> lastCCSDSPackage;
 	std::vector<ParentCCSDS*> vecCCSDS;	
 
 	std::bitset<LEN_VERSION_VCDU_BIT> version;
@@ -63,5 +63,5 @@ private:
 };
 
 
-template class VCDU<std::vector<unsigned char>>;
+template class VCDU<std::vector<uint8_t>>;
 #endif

@@ -76,25 +76,25 @@ template<class TypeCCSDS>
 size_t CCSDS<TypeCCSDS>::getCountUsedByte() { return this->countUsedByte;}
 
 template<class TypeCCSDS>
-unsigned int CCSDS<TypeCCSDS>::getToUlongVersion(){ return this->version.to_ulong();}
+uint32_t CCSDS<TypeCCSDS>::getToUlongVersion(){ return this->version.to_ulong();}
 
 template<class TypeCCSDS>
-unsigned int CCSDS<TypeCCSDS>::getToUlongType(){ return this->type.to_ulong();}
+uint32_t CCSDS<TypeCCSDS>::getToUlongType(){ return this->type.to_ulong();}
 
 template<class TypeCCSDS>
-unsigned int CCSDS<TypeCCSDS>::getToUlongHelpersHeaderFlag() { return this->helperHeaderFlag.to_ulong();}
+uint32_t CCSDS<TypeCCSDS>::getToUlongHelpersHeaderFlag() { return this->helperHeaderFlag.to_ulong();}
 
 template<class TypeCCSDS>
-unsigned int CCSDS<TypeCCSDS>::getToUlongAPID() { return this->APID.to_ulong();}
+uint32_t CCSDS<TypeCCSDS>::getToUlongAPID() { return this->APID.to_ulong();}
 
 template<class TypeCCSDS>
-unsigned int CCSDS<TypeCCSDS>::getToUlongFragmentationFlag(){ return this->fragmentationFlag.to_ulong();}
+uint32_t CCSDS<TypeCCSDS>::getToUlongFragmentationFlag(){ return this->fragmentationFlag.to_ulong();}
 
 template<class TypeCCSDS>
-unsigned int CCSDS<TypeCCSDS>::getToUlongFrameCounter(){ return this->frameCounter.to_ulong();}
+uint32_t CCSDS<TypeCCSDS>::getToUlongFrameCounter(){ return this->frameCounter.to_ulong();}
 
 template<class TypeCCSDS>
-unsigned int CCSDS<TypeCCSDS>::getToUlongSize() { return this->size.to_ulong();}
+uint32_t CCSDS<TypeCCSDS>::getToUlongSize() { return this->size.to_ulong();}
 
 template<class TypeCCSDS>
 std::bitset<64> CCSDS<TypeCCSDS>::getToBitsetTime() { return this->time;}

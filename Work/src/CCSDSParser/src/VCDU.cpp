@@ -68,32 +68,32 @@ VCDU<TypeVCDU>::~VCDU()
 	this->vecCCSDS.clear();
 }
 template<class TypeVCDU>
-std::vector<unsigned char> VCDU<TypeVCDU>::getLastCCSDSPacksge(){return this->lastCCSDSPackage;};
+std::vector<uint8_t> VCDU<TypeVCDU>::getLastCCSDSPacksge(){return this->lastCCSDSPackage;};
 
 template<class TypeVCDU>
 std::vector<ParentCCSDS*> VCDU<TypeVCDU>::getCCSDSVector(){return this->vecCCSDS;}
 
 template<class TypeVCDU>
-unsigned int VCDU<TypeVCDU>::getToUlongVersion(){ return this->version.to_ulong();}
+uint32_t VCDU<TypeVCDU>::getToUlongVersion(){ return this->version.to_ulong();}
 
 template<class TypeVCDU>
-unsigned int VCDU<TypeVCDU>::getToUlongObjID(){ return this->ObjID.to_ulong();}
+uint32_t VCDU<TypeVCDU>::getToUlongObjID(){ return this->ObjID.to_ulong();}
 
 template<class TypeVCDU>
-unsigned int VCDU<TypeVCDU>::getToUlongVCID(){ return this->VCID.to_ulong();}
+uint32_t VCDU<TypeVCDU>::getToUlongVCID(){ return this->VCID.to_ulong();}
 
 template<class TypeVCDU>
-unsigned int VCDU<TypeVCDU>::getToUlongFrameCounter() { return this->frameCounter.to_ulong();}
+uint32_t VCDU<TypeVCDU>::getToUlongFrameCounter() { return this->frameCounter.to_ulong();}
 
 template<class TypeVCDU>
-unsigned int VCDU<TypeVCDU>::getToUlongRepetitionFlag() { return this->repetitionFlag.to_ulong();}
+uint32_t VCDU<TypeVCDU>::getToUlongRepetitionFlag() { return this->repetitionFlag.to_ulong();}
 
 template<class TypeVCDU>
-unsigned int VCDU<TypeVCDU>::getToUlongReserve() { return this->reserve.to_ulong();}
+uint32_t VCDU<TypeVCDU>::getToUlongReserve() { return this->reserve.to_ulong();}
 
 template<class TypeVCDU>
-unsigned int VCDU<TypeVCDU>::getToUlongReservedBitMDPU() { return this->reserveBitMDPU.to_ulong();}
+uint32_t VCDU<TypeVCDU>::getToUlongReservedBitMDPU() { return this->reserveBitMDPU.to_ulong();}
 
 template<class TypeVCDU>
-unsigned int VCDU<TypeVCDU>::getToUlongOffsetBitMDPU() {return this->offsetBitMDPU.to_ulong();} 
+uint32_t VCDU<TypeVCDU>::getToUlongOffsetBitMDPU() {return this->offsetBitMDPU.to_ulong();} 
 	
