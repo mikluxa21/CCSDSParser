@@ -1,8 +1,9 @@
-cmake_minimum_required(VERSION 3.16.3)
+set(SRC CCSDS.cpp VCDU.cpp Interface.cpp)
 
-project(CCSDS VERSION 1.0.0 DESCRIPTION "add executable main")
+add_library(lib ${SRC})
 
-set(SOURCE_FILES main.cpp)
-add_executable(main ${SOURCE_FILES})
+set(main main.cpp)
 
-target_link_libraries(main PRIVATE libInterface)
+add_executable(main ${main})
+
+target_link_libraries(main lib)
