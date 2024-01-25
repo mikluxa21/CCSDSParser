@@ -1,4 +1,4 @@
-#include "CCSDSParser/Interface.h"
+#include <Interface.h>
 #include <iostream>
 
 
