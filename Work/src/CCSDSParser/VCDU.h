@@ -1,3 +1,5 @@
+#ifndef VCDU_H
+#define VCDU_H
 #include <CCSDS.h>
 
 #include <bitset>
@@ -122,3 +124,7 @@ private:
 	std::bitset<LEN_OFFSET_MDPU_BIT> offsetBitMDPU;
 	size_t resultOffset;
 };
+
+
+template class VCDU<std::vector<unsigned char>>;
+#endif

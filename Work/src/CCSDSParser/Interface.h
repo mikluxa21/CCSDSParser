@@ -1,3 +1,5 @@
+#ifndef INTERFACE_H
+#define INTERFACE_H
 #include <VCDU.h>
 
 
@@ -66,3 +68,5 @@ private:
 	size_t lastAPID = -1;
 	std::vector<std::vector<unsigned char>> vecResult;	
 };
+template class Interface<std::vector<unsigned char>>;
+#endif
