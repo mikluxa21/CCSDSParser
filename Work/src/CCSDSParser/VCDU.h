@@ -1,7 +1,7 @@
 #ifndef VCDU_H
 #define VCDU_H
 
-#include <CCSDS.h>
+#include <CCSDSParser/CCSDS.h>
 
 #include <bitset>
 #include <string>

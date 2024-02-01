@@ -1,11 +1,6 @@
-#include "Help/Test_Helpers.h"
-
-#include ".../src/CCSDSParser/Interface.h"
-
+#include <CCSDSParser/Interface.h>
 #include <gtest/gtest.h>
-
-
-
+#include "Help/Test_Helpers.h"
 
 
 TEST(Interface, SomePackage)

@@ -1,4 +1,4 @@
-#include "../CCSDS.h"
+#include <CCSDSParser/CCSDS.h>
 
 
 template <class TypeCCSDS>

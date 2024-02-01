@@ -1,7 +1,7 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
-#include <VCDU.h>
+#include <CCSDSParser/VCDU.h>
 
 
 template <class TypeInterface>
