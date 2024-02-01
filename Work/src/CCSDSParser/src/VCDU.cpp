@@ -1,4 +1,4 @@
-#include <VCDU.h>
+#include "../VCDU.h"
 template<class TypeVCDU>
 VCDU<TypeVCDU>::VCDU(TypeVCDU& packageVCDU, size_t packageLen)
 {	

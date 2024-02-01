@@ -1,9 +1,7 @@
-set(SRC CCSDS.cpp VCDU.cpp Interface.cpp)
+cmake_minimum_required(VERSION 3.16.3)
+cmake_policy(SET CMP0016 NEW)
+project(main)
 
-add_library(lib ${SRC})
+add_executable(${PROJECT_NAME} main.cpp)
 
-set(main main.cpp)
-
-add_executable(main ${main})
-
-target_link_libraries(main lib)
+target_link_libraries(${PROJECT_NAME} sub::lib)

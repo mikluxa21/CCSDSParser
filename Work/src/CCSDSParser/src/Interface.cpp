@@ -1,4 +1,4 @@
-#include <Interface.h>
+#include "../Interface.h"
 
 template <class TypeInterface>
 Interface<TypeInterface>::Interface()
